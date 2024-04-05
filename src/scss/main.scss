@@ -1,0 +1,117 @@
+
+$white: #fff;
+$black: #070707;
+$grey: rgba(0, 26, 52, .6);
+$grey--light: rgba(0, 48, 120, .039);
+$grey--bg: #f3f6f9;
+$blue: #005bff;
+$green: #10c44c;
+$red: #f91155;
+$magenta: #e53759;
+$slide-1: #b53ef5;
+$slide-2: #f7d148;
+$slide-3: #fff4db;
+$slide-4: #b1d3f4;
+$slide-5: #ffd833;
+
+@import '../scss/reset.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'GTEestiPro';
+    font-weight: 700;
+    font-display: swap;
+    src: url('../asset/fonts/GT-Eesti-Pro-Display-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'GTEestiPro';
+    font-weight: 500;
+    font-display: swap;
+    src: url('../asset/fonts/GT-Eesti-Pro-Display-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'GTEestiPro';
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+    src: url('../asset/fonts/GT-Eesti-Pro-Display-Medium-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'GTEestiPro';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../asset/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2');
+}
+
+// @font-face {
+//     font-family: 'GT-Eesti-Pro-Regular'; 
+//     src: url('../asset/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2'),
+//         url('../asset/fonts/GT-Eesti-Pro-Display-Regular.ttf') format('truetype');
+//     font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'GT-Eesti-Pro-Medium'; 
+//     src: url('../asset/fonts/GT-Eesti-Pro-Display-Medium.woff2') format('woff2'),
+//         url('../asset/fonts/GT-Eesti-Pro-Display-Medium.ttf') format('truetype');
+//     font-weight: medium;
+// }
+
+// @font-face {
+//     font-family: 'GT-Eesti-Pro-Bold'; 
+//     src: url('../asset/fonts/GT-Eesti-Pro-Display-Bold.woff2') format('woff2'),
+//         url('../asset/fonts/GT-Eesti-Pro-Display-Bold.ttf') format('truetype');
+//     font-weight: bold;
+// }
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'GTEestiPro', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+@import '../scss/common.scss';
+@import '../scss/header.scss';
+@import '../scss/content.scss';
+@import '../scss/modal.scss';
+
+
+
+
+.card {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .card .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card .card-front, .card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card .card-front {
+    background-color: red; /* Цвет лица карты */
+    transform: rotateY(0deg);
+  }
+  
+  .card .card-back {
+    background-color: blue; /* Цвет рубашки карты */
+    transform: rotateY(180deg);
+  }

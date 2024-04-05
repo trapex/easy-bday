@@ -1,0 +1,205 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 28px;
+    width: 100%;
+    background-color: $white;
+    z-index: 100;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+
+    @media screen and (max-width: 640px) {
+        min-width: 320px;
+        padding: 16px 16px 14px;
+    }
+    
+    &.fixed {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid #e2e6ee; /* Устанавливаем нижнюю границу с цветом */
+    }
+
+    &__overflow {
+        max-width: 1472px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 640px) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        margin-right: 16px;
+
+        &-easy {
+            width: 200px;
+            height: 44px;
+            background-color: grey;
+        }
+    }
+
+    &__catalog {
+        margin-right: 16px;
+    }
+    &__catalog-btn {
+        appearance: none;
+        position: relative;
+        display: inline-flex;
+        overflow: hidden;
+        margin: 0;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        background-color: $blue;
+        color: #fff;
+
+    }
+    &__catalog-icon {
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+    &__catalog-text {
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: .2px;
+        line-height: 24px;
+    }
+
+    &__search {
+        position: relative;
+        background: $white;
+        border-radius: 8px;
+        height: 40px;
+        margin-right: 24px;
+        color: $white;
+    }
+    &__search-wrap {
+        display: flex;
+        background-color: $blue;
+        height: 100%;
+        border-radius: 12px;
+    }
+    &__search-lens {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 24px;
+    }
+    &__search-overflow {
+        display: flex;
+        min-width: 590px;
+        margin: 3px;
+        background-color: $white;
+        border-radius: 10px;
+    }
+    &__search-line {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 400px;
+        padding: 0 6px;
+        border-radius: 0 6px 6px 0;
+        color: $grey;
+        line-height: 1;
+    }
+    &__search-line-text {
+        // margin-top: 1px;
+    }
+    &__search-place {
+        display: flex;
+        align-items: center;
+        width: 70px;
+        margin: 2px;
+        padding: 2px 12px;
+        border-radius: 8px;
+        background-color: $grey--light;
+        color: $grey;
+        font-size: 13px;
+    }
+    &__search-place-icon {
+        margin-top: 3px;
+    }
+    &__profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $black;
+    }
+    &__profile-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 56px;
+        width: 76px;
+        margin: 0 12px;
+        padding-top: 8px;
+        color: $black;
+    }
+    &__profile-icon {
+        text-align: center;
+    }
+    &__push {
+        position: absolute;
+        background-color: $magenta;
+        color: $white;
+        top: 0;
+        left: calc(50% + 10px);
+        padding: 2px 8px;
+        border-radius: 8px;
+        font-size: 11px;
+    }
+}
+
+
+.mob-header {
+    @media screen and (min-width: 641px) {
+        display: none;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__place {
+        display: flex;
+        align-items: center;
+    }
+
+    &__place-icon {
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    &__profile {
+
+    }
+}
+
+.mob-search {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 10px 14px;
+    background-color: $grey--light;
+    border-radius: 12px;
+    color: rgba(0, 26, 52, .4);
+    
+    &__lens {
+        
+    }
+
+    &__text {
+        margin-left: 12px;
+    }
+}

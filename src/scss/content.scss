@@ -1,0 +1,327 @@
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 76px;
+    min-height: calc(100vh - 40px);
+    background-color: $grey--bg;
+
+    @media screen and (max-width: 640px) {
+        margin-top: 110px;
+        min-width: 320px;
+    }
+
+    &__overflow {
+        margin: 0 auto;
+        padding: 10px 0;
+
+        @media screen and (min-width: 641px) {
+            min-width: 1472px;
+            max-width: 1472px;
+        }
+    }
+    &__item {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 20px 30px;
+        background-color: $white;
+        border-radius: 12px;
+    }
+    .slider {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+
+        &__wrap {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 150px;
+            background-image: url('../asset/img/slide-1.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+
+            &:nth-child(1) {
+                background-image: url('../asset/img/slide-1.jpg');
+
+                & .slider__text {
+                    color: $slide-1;
+                }
+            }
+            &:nth-child(2) {
+                background-image: url('../asset/img/slide-2.jpg');
+
+                & .slider__text {
+                    color: $slide-2;
+                }
+            }
+            &:nth-child(3) {
+                background-image: url('../asset/img/slide-3.jpg');
+
+                & .slider__text {
+                    color: $slide-3;
+                }
+            }
+            &:nth-child(4) {
+                background-image: url('../asset/img/slide-4.jpg');
+
+                & .slider__text {
+                    color: $slide-4;
+                }
+            }
+            &:nth-child(5) {
+                background-image: url('../asset/img/slide-5.jpg');
+
+                & .slider__text {
+                    color: $slide-5;
+                }
+            }
+            &:nth-child(6) {
+                background-image: url('../asset/img/slide-6.jpg');
+            }
+            &:nth-child(7) {
+                background-image: url('../asset/img/slide-7.jpg');
+            }
+            &:nth-child(8) {
+                background-image: url('../asset/img/slide-8.jpg');
+            }
+            &:nth-child(9) {
+                background-image: url('../asset/img/slide-9.jpg');
+            }
+            &:nth-child(10) {
+                background-image: url('../asset/img/slide-10.jpg');
+            }
+            &:nth-child(11) {
+                background-image: url('../asset/img/slide-11.jpg');
+            }
+        }
+        &__text {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 900;
+            color: $white;
+            text-transform: uppercase;
+
+            @media screen and (min-width: 641px) {
+                font-size: 48px;
+            }
+        }
+
+        &__dots {
+            position: absolute;
+            width: 220px;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -110px;
+            text-align: center;
+            display: none;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: $grey;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: $white;
+        }
+
+    }
+
+    &__common {
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+
+       & .content__item {
+            width: 100%;
+
+            @media screen and (min-width: 641px) {
+                width: 77%;
+            }
+        }
+    }
+
+    .congrats {
+        &__title {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        &__list {
+            margin: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 640px) {
+                margin: 0 auto;
+            }
+        
+            @media screen and (min-width: 641px) {
+                margin-right: 16px;
+            }
+
+            &:nth-child(1) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/galochkin-sergey.png');
+                }
+            }
+            &:nth-child(2) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/sasha-kopylova.jpg');
+                }
+            }
+            &:nth-child(3) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+            &:nth-child(4) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+            &:nth-child(5) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+            &:nth-child(6) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+            &:nth-child(7) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+            &:nth-child(8) {
+                .congrats__img-back {
+                    background-image: url('../asset/img/example.jpg');
+                }
+            }
+
+            &:nth-child(4n) {
+
+                @media screen and (min-width: 641px) {
+                    margin-right: 0;
+                }
+            }
+        }
+        &__card {
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        &__card-wrap {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        &__img {
+            width: 245px;
+            height: 245px;
+            background-color: $grey--light;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        &__img-front,
+        &__img-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+        }
+        &__img-front {
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: rotateY(0deg);
+
+            &.--boy {
+                background-image: url('../asset/img/boy-glasses-icon.png');
+            }
+            &.--girl {
+                background-image: url('../asset/img/girl-glasses-icon.png');
+            }
+        }
+        &__img-back {
+            background-size: cover;
+            background-position: center;
+            transform: rotateY(180deg);
+        }
+        &__info {
+            margin: 14px 0;
+        }
+        &__price {
+            display: flex;
+            align-items: baseline;
+        }
+        &__cost {
+            font-size: 20px;
+            color: $green;
+        }
+        &__discount {
+            margin-left: 8px;
+            font-size: 13px;   
+            color: $red; 
+        }
+        &__name {
+            margin-top: 6px;
+            font-size: 16px;
+        }
+    }
+
+    .photoslider {
+        position: relative;
+        width: 310px;
+        height: 425px;
+        overflow: hidden;
+
+        @media screen and (max-width: 640px) {
+            margin: 20px auto;
+        }
+
+        @media screen and (min-width: 641px) {
+            width: 22%;
+        }
+
+        &__wrap {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100%;
+
+            img {
+                width: 310px;
+                height: 425px;
+                object-fit: contain;
+            }
+        }
+    }
+}
